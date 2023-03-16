@@ -16,7 +16,12 @@ int main () {
 		for (size_t i = 0; i < read; ++i) {
 			auto const c = in[i];
 
-			if (' ' <= c and c <= '~') {
+			if (
+				(' ' <= c and c <= '~')
+				or (c == '\n')
+				or (c == '\r')
+				or (c == '\t')
+			) {
 				out[j++] = c;
 			}
 		}
