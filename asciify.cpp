@@ -17,9 +17,8 @@ int main () {
 			auto const c = in[i];
 
 			if (
-				(' ' <= c and c <= '~')
+				(c >= ' ' and c <= '~')
 				or (c == '\n')
-				or (c == '\r')
 				or (c == '\t')
 			) {
 				out[j++] = c;
